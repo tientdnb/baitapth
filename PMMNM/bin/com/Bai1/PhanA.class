@@ -1,0 +1,15 @@
+Êþº¾   7 i  com/Bai1/PhanA  java/lang/Object <init> ()V Code
+  	   LineNumberTable LocalVariableTable this Lcom/quynhdev/PhanA; main ([Ljava/lang/String;)V
+    com/quynhdev/JDBCConnection   getJDBCConnection ()Ljava/sql/Connection;  `select MaSP, TenSP, TenLoaiSP from SanPham SP join LoaiSanPham LSP on SP.MaLoaiSP = LSP.MaLoaiSP    java/sql/Connection   prepareStatement 0(Ljava/lang/String;)Ljava/sql/PreparedStatement;  !   java/sql/PreparedStatement " # executeQuery ()Ljava/sql/ResultSet;	 % ' & java/lang/System ( ) out Ljava/io/PrintStream; + java/lang/StringBuilder - MaSP / 1 0 java/sql/ResultSet 2 3 	getString &(Ljava/lang/String;)Ljava/lang/String;
+ 5 7 6 java/lang/String 8 9 valueOf &(Ljava/lang/Object;)Ljava/lang/String;
+ * ;  < (Ljava/lang/String;)V >  - 
+ * @ A B append -(Ljava/lang/String;)Ljava/lang/StringBuilder; D TenSP F 	TenLoaiSP
+ * H I J toString ()Ljava/lang/String;
+ L N M java/io/PrintStream O < println / Q R S next ()Z
+ U W V java/sql/SQLException X  printStackTrace args [Ljava/lang/String; 
+connection Ljava/sql/Connection; sql Ljava/lang/String; preparedStatement Ljava/sql/PreparedStatement; 	resultSet Ljava/sql/ResultSet; e Ljava/sql/SQLException; StackMapTable Z 
+SourceFile 
+PhanA.java !               /     *· ±    
+                    	      &     k¸ LM+,¹  N-¹  :§ A² $» *Y,¹ . ¸ 4· :=¶ ?C¹ . ¶ ?=¶ ?E¹ . ¶ ?¶ G¶ K¹ P šÿ»§ N-¶ T±   b e U  
+   * 
+              X  b  f  j     >    k Y Z    g [ \   d ] ^   S _ `   K a b  f  c d  e   - ÿ   f  5  /  =ÿ   f  5  U  g    h

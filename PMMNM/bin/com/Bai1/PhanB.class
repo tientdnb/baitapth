@@ -1,0 +1,14 @@
+Êþº¾   7 e  com/Bai1/PhanB  java/lang/Object <init> ()V Code
+  	   LineNumberTable LocalVariableTable this Lcom/quynhdev/PhanB; main ([Ljava/lang/String;)V  java/util/Scanner	    java/lang/System   in Ljava/io/InputStream;
+     (Ljava/io/InputStream;)V	     out Ljava/io/PrintStream;   Nhap MaLoaiSP: 
+ " $ # java/io/PrintStream % & print (Ljava/lang/String;)V
+  ( ) * nextLine ()Ljava/lang/String; , Nhap TenLoaiSP: 
+ . 0 / com/quynhdev/JDBCConnection 1 2 getJDBCConnection ()Ljava/sql/Connection; 4 %insert into LoaiSanPham values (?, ?) 6 8 7 java/sql/Connection 9 : prepareStatement 0(Ljava/lang/String;)Ljava/sql/PreparedStatement; < > = java/sql/PreparedStatement ? @ 	setString (ILjava/lang/String;)V < B C D executeUpdate ()I F -Nhap du lieu vao bang LoaiSanPham thanh cong!
+ " H I & println
+ K M L java/sql/SQLException N  printStackTrace args [Ljava/lang/String; scanner Ljava/util/Scanner; maLoaiSP Ljava/lang/String; 	tenLoaiSP 
+connection Ljava/sql/Connection; sql preparedStatement Ljava/sql/PreparedStatement; result I e Ljava/sql/SQLException; StackMapTable P b java/lang/String 
+SourceFile 
+PhanB.java !               /     *· ±    
+                    	      F     g» Y² · L² ¶ !+¶ 'M² +¶ !+¶ 'N¸ -:3:¹ 5 :,¹ ; -¹ ; ¹ A 6² E¶ G§ 
+:¶ J±  . \ _ K  
+   >              %  *  .  9  B  K  T  \  a  f     \ 	   g O P    \ Q R   O S T  % B U T  * = V W  . 9 X T  9 # Y Z  T  [ \  a  ] ^  _    ÿ _  `  a a 6 a  K  c    d
